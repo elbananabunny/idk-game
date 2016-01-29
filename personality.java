@@ -42,6 +42,8 @@ public class personality
 		System.out.println("\n5. Is this quiz broken?");
 		System.out.println("\ta. Probably");
 		prompt(); //This question gives no points
+		if (input != 'a')
+			System.out.println("\nYou are the idiotest, not even typing the letter right. What are you, stupid?\n");
 
 		System.out.println("\n6. [Before answering this question please read \"The Odyssey\" by Homer]");
 		System.out.println("   Are you satisfied with your life decisions?");
@@ -53,7 +55,7 @@ public class personality
 
 		System.out.println("\n7. Ralph?");
 		System.out.println("\ta. George?");
-		System.out.println("\tb. Kevin");
+		System.out.println("\tb. Kevin?");
 		System.out.println("\tc. Bobby McCrouber?");
 		System.out.println("\td. Hellen? (With 2 'L's)");
 		prompt();
@@ -68,7 +70,8 @@ public class personality
 		System.out.println("\n9. When sitting outside do you. . .");
 		System.out.println("\ta. Watch birds poop");
 		System.out.println("\tb. Poop yourself");
-		System.out.println("\tc. Think about how you are in a 3 dimensional world but can only percieve 2 dimensions");
+		System.out.println("\tc. Think about how you are in a 3 dimensional");
+		System.out.println("\t   world but can only percieve 2 dimensions");
 		System.out.println("\td. Think about poop");
 		prompt();
 		answer('a', 'c');
