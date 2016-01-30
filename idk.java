@@ -14,7 +14,7 @@ class idk
 		}
 		else
 		{
-			player.setCharacter("MajicMan");
+			player.setCharacter("Toaster");
 		}
 		System.out.print("You got. ");
 		try
@@ -60,14 +60,17 @@ class idk
 				choice[x] = scanner.nextLine();
 			}
 			
-			if (choice[x].equals("about"))
+			if (choice[x].equalsIgnoreCase("about"))
 				command.about();
 			
-			if (choice[x].equals("help"))
+			else if (choice[x].equalsIgnoreCase("help") || choice[x].equals("?"))
 				command.help();
 			
-			if (choice[x].equals("exit") || choice[x].equals("quit") || choice[x].equals("leave"))
+			else if (choice[x].equalsIgnoreCase("exit") || choice[x].equalsIgnoreCase("quit") || choice[x].equalsIgnoreCase("leave"))
 				break;
+
+			else
+				System.out.println("I don't know that command, idiot.");
 			
 			++x; //Always at end, lets the program keep adding onto the array of Strings.
 		}
