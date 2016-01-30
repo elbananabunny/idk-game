@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class idk
 {
 	public static void main(String[] args)
@@ -42,5 +44,32 @@ class idk
         System.out.println("the door's door handle, is no longer attatched to the door.");
 		System.out.println("It is your job to find it, " + player.getCharacter() + ".");
 		System.out.println("\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//");
+
+		boolean running = true; //When this becomes false, the game ends.
+		Scanner scanner = new Scanner(System.in);
+		String[] choice = new String[4096]; //Used to hold user input.
+		commands command = new commands(); //Class that has commands.
+		int x = 0;
+		while (running)
+		{
+			if (x == 4096)
+				x = 0; //Resets x to 0 so it overwrites the previous elements.
+			else
+			{
+				System.out.print("\n" + player.getCharacter() + ": ");
+				choice[x] = scanner.nextLine();
+			}
+			
+			if (choice[x].equals("about"))
+				command.about();
+			
+			if (choice[x].equals("help"))
+				command.help();
+			
+			if (choice[x].equals("exit") || choice[x].equals("quit") || choice[x].equals("leave"))
+				break;
+			
+			++x; //Always at end, lets the program keep adding onto the array of Strings.
+		}
 	}
 }

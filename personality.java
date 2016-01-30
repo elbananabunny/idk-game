@@ -5,7 +5,7 @@ public class personality
 	private char input; //Takes a, b, c, or d.
 	private byte points = 0; //Points determine who the player is.
 	public void quiz()
-	{
+	{	
 		System.out.println("Take this quiz, idiot.\n");
 		
 		System.out.println("1. If a hand came out of your toilet, what would you do?");
@@ -93,82 +93,132 @@ public class personality
 	void prompt() //Method make input taking less tedious
 	{
 		Scanner quiz = new Scanner(System.in);
-		System.out.print("Answer here (just the lowercase letter): ");
+		System.out.print("Answer here (just the letter): ");
 		this.input = quiz.next().charAt(0);
 	}
 	
 	void answer(char let) //Method for one answer that gives points.
 	{
 		char o1, o2, o3; //Where o = other possibility
-		if(let == 'a')
+		char oC0, oC1, oC2, oC3; //Where oC is other possibility capitalized. oC0 is the answer capitalized
+		if(let == 'a') //If single answer letter is 'a'
 		{
 			o1 = 'b';
 			o2 = 'c';
 			o3 = 'd';
+
+			oC0 = 'A';
+			oC1 = 'B';
+			oC2 = 'C';
+			oC3 = 'D';
 		}
-		else if(let == 'b')
+		else if(let == 'b') //If single answer letter is 'b'
 		{
 			o1 = 'a';
 			o2 = 'c';
 			o3 = 'd';
+
+			oC0 = 'B';
+			oC1 = 'A';
+			oC2 = 'C';
+			oC3 = 'D';
 		}
-		else if(let == 'c')
+		else if(let == 'c') //If single answer letter is 'c'
 		{
 			o1 = 'a';
 			o2 = 'b';
 			o3 = 'd';
+
+			oC0 = 'C';
+			oC1 = 'A';
+			oC2 = 'B';
+			oC3 = 'D';
 		}
-		else
+		else //If single letter answer is 'd'
 		{
 			o1 = 'a';
 			o2 = 'b';
 			o3 = 'c';
+
+			oC0 = 'D';
+			oC1 = 'A';
+			oC2 = 'B';
+			oC3 = 'C';
 		}
 		
-		if(input == let)
+		if(input == let || input == oC0)
 			++points;
-		else if(input == o1 || input == o2 || input == o3);
-		else
+		else if(!(input == o1 || input == o2 || input == o3 || input == oC1 || input == oC2 || input == oC3))
 			System.out.println("\nYou are the idiotest, not even typing the letter right. What are you, stupid?\n");
 	}
 
 	void answer(char let1, char let2) //Method for two answers that gives points
 	{
-		int oO1, oO2; //Where o = other overloaded possibility
+		char oO1, oO2; //Where o = other overloaded possibility
+		char cLet1, cLet2, oOC1, oOC2; //Where c & C is capitalized
 		if(let1 == 'a' && let2 == 'b')
 		{
 			oO1 = 'c';
 			oO2 = 'd';
+
+			cLet1 = 'A';
+			cLet2 = 'B';
+			oOC1 = 'C';
+			oOC2 = 'D';
 		}
 		else if(let1 == 'a' && let2 == 'c')
 		{
 			oO1 = 'b';
 			oO2 = 'd';
+
+			cLet1 = 'A';
+			cLet2 = 'C';
+			oOC1 = 'B';
+			oOC2 = 'D';
 		}
 		else if(let1 == 'a' && let2 == 'd')
 		{
 			oO1 = 'b';
 			oO2 = 'c';
+
+			cLet1 = 'A';
+			cLet2 = 'D';
+			oOC1 = 'B';
+			oOC2 = 'C';
 		}
 		else if(let1 == 'b' && let2 == 'c')
 		{
 			oO1 = 'a';
 			oO2 = 'd';
+
+			cLet1 = 'B';
+			cLet2 = 'C';
+			oOC1 = 'A';
+			oOC2 = 'D';
 		}
 		else if(let1 == 'b' && let2 == 'd')
 		{
 			oO1 = 'a';
 			oO2 = 'c';
+
+			cLet1 = 'B';
+			cLet2 = 'D';
+			oOC1 = 'A';
+			oOC2 = 'C';
 		}
 		else
 		{
 			oO1 = 'a';
 			oO2 = 'b';
+
+			cLet1 = 'C';
+			cLet2 = 'D';
+			oOC1 = 'A';
+			oOC2 = 'B';
 		}
-		if(input == let1 || input == let2)
+		if(input == let1 || input == let2 || input == cLet1 || input == cLet2)
 			++points;
-		else if(input == oO1 || input == oO2);
-		else
+		else if(!(input == oO1 || input == oO2 || input == oOC1 || input == oOC2))
 			System.out.println("\nYou are the idiotest, not even typing the letter right. What are you, stupid?\n");
 	}
 }
