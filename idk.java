@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.io.*;
 
 class idk
 {
@@ -38,41 +39,50 @@ class idk
 		{
 			System.out.println("\nLook, there is supposed to be suspense, but you messed it up, idiot.");
 		}
-		System.out.println("\n\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//");
-		System.out.println("You, " + player.getCharacter() + " are living with your grandma, but hear a thud,");
-		System.out.println("You are suspicious and go check it out, but you girlfriend,");
-        System.out.println("the door's door handle, is no longer attatched to the door.");
-		System.out.println("It is your job to find it, " + player.getCharacter() + ".");
-		System.out.println("\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//");
 
 		boolean running = true; //When this becomes false, the game ends.
+		boolean passed = false; //Becomes true if a level is passed.
 		Scanner scanner = new Scanner(System.in);
 		String[] choice = new String[4096]; //Used to hold user input.
 		commands command = new commands(); //Class that has commands.
 		int x = 0;
+		String clearCmd = new String(System.getProperty("os.name"));
+		level level = new level();
+	Exit: //For the exit command.
 		while (running)
 		{
-			if (x == 4096)
-				x = 0; //Resets x to 0 so it overwrites the previous elements.
-			else
+			level.currentLevel();
+			
+			while (passed == false)
 			{
+				if (x == 4096)
+					x = 0; //Resets x to 0 so it overwrites the previous elements.
+				
 				System.out.print("\n" + player.getCharacter() + ": ");
 				choice[x] = scanner.nextLine();
+				
+				if (choice[x].equalsIgnoreCase("about"))
+					command.about();
+				
+				else if (choice[x].equalsIgnoreCase("help") || choice[x].equals("?"))
+					command.help();
+				
+				else if (choice[x].equalsIgnoreCase("exit") || choice[x].equalsIgnoreCase("quit") || choice[x].equalsIgnoreCase("leave"))
+					break Exit;
+				
+				else if (choice[x].equalsIgnoreCase("what is all this junk on my screen?"))
+				{
+					command.clear();
+					level.currentLevel();
+				}
+				
+				//implement scuicide.
+				
+				else
+					System.out.println("I don't know that command, idiot.");
+				
+				++x; //Always at end, lets the program keep adding onto the array of Strings.
 			}
-			
-			if (choice[x].equalsIgnoreCase("about"))
-				command.about();
-			
-			else if (choice[x].equalsIgnoreCase("help") || choice[x].equals("?"))
-				command.help();
-			
-			else if (choice[x].equalsIgnoreCase("exit") || choice[x].equalsIgnoreCase("quit") || choice[x].equalsIgnoreCase("leave"))
-				break;
-
-			else
-				System.out.println("I don't know that command, idiot.");
-			
-			++x; //Always at end, lets the program keep adding onto the array of Strings.
 		}
 	}
 }
