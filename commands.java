@@ -14,6 +14,7 @@ public class commands
 		System.out.println("quit\t\t\t\t\tLeaves the game");
 		System.out.println("about\t\t\t\t\tGives information about the game and its creators");
 		System.out.println("what is all this junk on my screen?\tClears screen");
+		System.out.println("suicide\t\t\t\t\tKills yourself");
 	}
 	void about()
 	{

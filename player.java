@@ -10,12 +10,11 @@ public class player
 	{
 		return character;
 	}
-	public static void giveHealth(int hp)
+	public static void die()
 	{
-		health += hp;
-	}
-	public static void takeHealth(int hp)
-	{
-		health -= hp;
+		System.out.println("Good job idiot, you died yourself.");
+		System.out.println("I already told you there are no saves,");
+		System.out.println("You probably just screwed yourself over.");
+		System.out.print("Want to leave? If not Y, N, Yes, or No, defaults to no [Y or N]: ");
 	}
 }
