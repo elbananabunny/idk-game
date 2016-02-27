@@ -1,3 +1,8 @@
+/*
+ * This class contains the quiz methods.
+ * If you are looking for the main method, check idk.java
+ */
+
 import java.util.Scanner;
 
 public class personality
@@ -6,7 +11,7 @@ public class personality
 	private byte points = 0; //Points determine who the player is.
 	public void quiz()
 	{	
-		System.out.println("Take this quiz, idiot.\n");
+		System.out.println("Take this quiz, idiot poopy hole, is the worst of the idiot holes.\n");
 		
 		System.out.println("1. If a hand came out of your toilet, what would you do?");
 		System.out.println("\ta. Scream");
@@ -87,20 +92,21 @@ public class personality
 
 	public byte getPoints()
 	{
-		return points;
+		return points; //Gives the value of points.
 	}
 
-	void prompt() //Method make input taking less tedious
+	void prompt() //Method make input taking less tedious. Prompts the user then stores it in the atribute "input"
 	{
 		Scanner quiz = new Scanner(System.in);
 		System.out.print("Answer here (just the letter): ");
-		this.input = quiz.next().charAt(0);
+		this.input = quiz.next().charAt(0); //Stores their character in atribute input.
 	}
 	
 	void answer(char let) //Method for one answer that gives points.
 	{
 		char o1, o2, o3; //Where o = other possibility
 		char oC0, oC1, oC2, oC3; //Where oC is other possibility capitalized. oC0 is the answer capitalized
+		/* Next if else set is for setting the above characters. */
 		if(let == 'a') //If single answer letter is 'a'
 		{
 			o1 = 'b';
@@ -156,6 +162,7 @@ public class personality
 	{
 		char oO1, oO2; //Where o = other overloaded possibility
 		char cLet1, cLet2, oOC1, oOC2; //Where c & C is capitalized
+		/* Next if else set is for setting the above characters. */
 		if(let1 == 'a' && let2 == 'b')
 		{
 			oO1 = 'c';
@@ -216,9 +223,9 @@ public class personality
 			oOC1 = 'A';
 			oOC2 = 'B';
 		}
-		if(input == let1 || input == let2 || input == cLet1 || input == cLet2)
+		if(input == let1 || input == let2 || input == cLet1 || input == cLet2) //Adds one to points if the atribute "input" == arg_ignore_case
 			++points;
-		else if(!(input == oO1 || input == oO2 || input == oOC1 || input == oOC2))
+		else if(!(input == oO1 || input == oO2 || input == oOC1 || input == oOC2)) //If input != anything, taunt player.
 			System.out.println("\nYou are the idiotest, not even typing the letter right. What are you, stupid?\n");
 	}
 }

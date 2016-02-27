@@ -1,116 +1,53 @@
+/*
+ * This file contains the main, but it doesn't do much.
+ * It really just controls the flow. Most classes aren't used in the main.
+ * If you want to see what is actually going on, see adventure.java
+ */
+
 import java.util.Scanner;
-import java.io.*;
+//import java.io.*;
 
 class idk
 {
 	public static void main(String[] args)
 	{
-		System.out.println("This game is bad idk.");
-		System.out.println("We warned you, we will warn you again, idk.");
-		System.out.println("This game is bad idk.");
-		System.out.println("There are no saves idk.");
+		System.out.println("\nThere are no saves idk.");
 		System.out.println("Don't die idk.");
 		System.out.println("Type \"Help\" for help idk.\n\n");
-		personality test = new personality();
-		player player = new player();
-		test.quiz();
-		byte playerPoints = test.getPoints();
-		if (playerPoints <= 4)
+		personality test = new personality(); //create an object for personality class.
+		player player = new player(); //create an object for player class.
+		test.quiz(); //start the quiz.
+		byte playerPoints = test.getPoints(); //get the total points and set it to playerPoints.
+		if (playerPoints <= 4) //If player points is lower than 5...
 		{
-			player.setCharacter("MajicMan");
+			player.setCharacter("MajicMan"); //... the player is MajicMan
 		}
 		else
 		{
-			player.setCharacter("Toaster");
+			player.setCharacter("Toaster"); //If the number is higher (or somehow lower if they get the source code...) then default to Toaster.
 		}
 		System.out.print("You got. ");
 		try
 		{
-			for (int reveal = 1; reveal <= 2; ++reveal)
+			for (int reveal = 1; reveal <= 2; ++reveal) //Just a loop to print out a dot to make an elipse leading up to what character was chosen for them.
 			{
-				Thread.sleep(1000);
-				System.out.print(". ");
+				Thread.sleep(1000); //Pause one second.
+				System.out.print(". "); //Print a dot and a space.
 			}
 		}
-		catch (InterruptedException e)
+		catch (InterruptedException e) //Catch the exception if something goes wrong.
 		{
-			System.out.println("\nLook, there is supposed to be suspense, but you messed it up, idiot.");
+			System.out.println("\nLook, there is supposed to be suspense, but you messed it up, idiot."); //Tell them that something went wrong (rudely).
 		}
-		System.out.println(player.getCharacter());
+		System.out.println(player.getCharacter()); //Print what character they got.
 		try
 		{
-			Thread.sleep(1000);
+			Thread.sleep(1000); //Pause between starting the adventure.
 		}
 		catch (InterruptedException e)
 		{
-			System.out.println("\nLook, there is supposed to be suspense, but you messed it up, idiot.");
+			System.out.println("\nLook, there is supposed to be suspense, but you messed it up, idiot."); //again, tell the user that something happened.
 		}
-		
-		boolean running = true; //When this becomes false, the game ends.
-		Scanner scanner = new Scanner(System.in);
-		level level = new level();
-		level.beginning();
-		while (running)
-		{
-			/*
-			if (x == 4096)
-				x = 0; //Resets x to 0 so it overwrites the previous elements.
-			
-			System.out.print("\n" + player.getCharacter() + ": ");
-			choice[x] = scanner.nextLine();
-			
-			baseCommands();
-			
-			if (choice[x].equalsIgnoreCase("exit") || choice[x].equalsIgnoreCase("quit") || choice[x].equalsIgnoreCase("leave"))
-				break;
-			
-			else if (choice[x].equalsIgnoreCase("suicide"))
-			{
-				player.die();
-				break;
-			}
-			
-			else
-				System.out.println("I don't know that command, idiot.");
-			
-			++x; //Always at end, lets the program keep adding onto the array of Strings.
-			*/
-			System.out.print("\n" + player.getCharacter() + ": ");
-			String beginning = scanner.nextLine();
-			baseCommands(beginning);
-			if (beginning.equalsIgnoreCase("exit") || beginning.equalsIgnoreCase("quit") || beginning.equalsIgnoreCase("leave"))
-				break;
-			else if (beginning.equalsIgnoreCase("what is all this junk on my screen?"))
-				level.beginning();
-			else if (beginning.equalsIgnoreCase("suicide"))
-			{
-				player.die();
-				String beginningSuicide = scanner.nextLine();
-				if (beginningSuicide.equalsIgnoreCase("Y") || beginningSuicide.equalsIgnoreCase("Yes"))
-					continue;
-				else if (beginningSuicide.equalsIgnoreCase("N") || beginningSuicide.equalsIgnoreCase("No"))
-					break;
-				else
-					continue;
-			}
-			else if (beginning.equalsIgnoreCase("1"))
-			{
-				level.adventure();
-			}
-			else if (beginning.equalsIgnoreCase("2"))
-				player.die();
-			else if (player.getCharacter().equalsIgnoreCase("Toaster") && beginning.equalsIgnoreCase("3"))
-				level.toasterHole();
-		}
-	}
-	static void baseCommands(String playerCommand)
-	{
-		commands command = new commands(); //Class that holds commands
-		if (playerCommand.equalsIgnoreCase("about"))
-			command.about();
-		else if (playerCommand.equalsIgnoreCase("help") || playerCommand.equals("?"))
-			command.help();
-		else if (playerCommand.equalsIgnoreCase("what is all this junk on my screen?"))
-			command.clear();
+		adventure adventure = new adventure(); //creates an object. no methods need to be called, the constructor does all the work.
 	}
 }
