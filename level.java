@@ -17,8 +17,8 @@ public class level
 			System.out.println("the door's door handle, is no longer attatched to the door.");
 			System.out.println("It is your job to find Patricia (her name), " + player.getCharacter() + ".");
 			System.out.println("You can do one of two things:");
-			System.out.println("\t1. Go on an adventure"); //Always tab choices.
-			System.out.println("\t2. Stay at your grandma's");
+			printTab("1. Go on an adventure"); //Always tab choices.
+			printTab("2. Stay at your grandma's");
 			jttn(2); //i'm lazy
 			lPrompt(); //i'm lazy
 		}
@@ -31,8 +31,8 @@ public class level
 			System.out.println("the door's door handle, is no longer attatched to the door.");
 			System.out.println("It is your job to find Patricia (her name), " + player.getCharacter() + ".");
 			System.out.println("You can do one of two things:");
-			System.out.println("\t1. Go on an adventure");
-			System.out.println("\t2. Stay at your grandma's");
+			printTab("1. Go on an adventure");
+			printTab("2. Stay at your grandma's");
 			jttn(2);
 			lPrompt();
 		}
@@ -40,38 +40,82 @@ public class level
 
 	void adventure()
 	{
+		if (player.getCharacter().equalsIgnoreCase("Toaster"))
+		{
+			uPrompt();
+			System.out.println("You leave your Grandmah's house in search for your butifull door knob");
+			System.out.println("girlfirend. As you walk you see a small hole, about the size of a");
+			System.out.println("toaster.");
+			System.out.println("You can do one of two things:");
+			printTab("1. Keep walking");
+			printTab("2. Go down toaster hole");
+			jttn(2);
+			lPrompt();
+		}
+		else
+		{
+			uPrompt();
+			System.out.println("You leave your Grandmah's house in search for your butifull door knob");
+			System.out.println("girlfirend. As you walk you see a small hole, about the size of a toaster.");
+			System.out.println("You can do one of one things:");
+			printTab("1. Keep walking");
+			jttn(1);
+			lPrompt();
+		}
+	}
+	
+	void goToTree()
+	{
 		uPrompt();
-		System.out.println("You go on an adventure. This is the end of the game so far. You should go away now.");
+		System.out.println("You walk for several more minutes. You see a Tree, you have never been outside");
+		System.out.println("before, and are entranced by this beautiful Tree.");
+		if (player.getCharacter().equalsIgnoreCase("Toaster"))
+			printTab("1. Burn Tree");
+		else
+			printTab("1. Poof Tree");
+		printTab("2. Seduce Tree");
+		jttn(2);
 		lPrompt();
 	}
 
-	void toasterHole()
+	void gardener() /**Complete dialogue when you are finished.*/
 	{
 		uPrompt();
-		System.out.println("You go down the toaster hole. This is the end of the game so far. You should go away now.");
+		System.out.println("This is all we have for this path, should have gone the other way, idiot.");
 		lPrompt();
 	}
 	
 	/* Next three methods created out of laziness, really. */
 	void uPrompt() //Upper prompt. The design above the prompt to signal that there is a new prompt.
 	{
-		System.out.println("\n\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//");
+		System.out.println("\n\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\");
 	}
 	
 	void lPrompt() //Lower prompt. The design under the prompt to signal that it is finished.
 	{
-		System.out.println("\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//");
+		System.out.println("\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\");
 	}
 	
-	void jttn(int x) //j(ust) t(ype) t(he) n(umber). Arg is how high the number should go.
+	void printTab(String x)
+	{
+		System.out.println("\t" + x);
+	}
+	
+	void jttn(int x) //j(ust) t(ype) t(he) n(umber). Arg is the ammount of choices the user has.
 	{
 		System.out.print("Just type the number ");
-		for (int i = 1; i <= x; ++i)
+		if (x > 1)
 		{
-			if (i < x)
-				System.out.printf("(%d or ", i);
-			else if (i == x)
-				System.out.printf("%d in this case).\n", i);
+			System.out.print("(");
+			for (int i = 1; i <= x; ++i) //loop that will print (<NUMBER> or <NUMBER>) until there is one number left.
+			{
+				if (i < x)
+					System.out.printf("%d or ", i);
+				else if (i == x)
+					System.out.printf("%d in this case).\n", i);
+			}
 		}
+		else
+			System.out.println("(1 or 1 in this case)."); //this is on intentional
 	}
 }

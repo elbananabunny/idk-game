@@ -25,6 +25,15 @@ public class commands
 		System.out.println("clear\t\t\tClears screen");
 		System.out.println("flavor town\t\tReprints prompt");
 		System.out.println("suicide\t\t\tKills yourself");
+		System.out.println("fusion\t\t\tLets you fuse a clear command and a print command.");
+		System.out.println("Syntax for fusion:");
+		System.out.println("\tfusion clear/cls/window washer! _/\\_ <PRINT_COMMAND>");
+		System.out.println("\tExample: fusion clear _/\\_ flavor town\twould clear then reprint prompt");
+		System.out.println("Available print commands:");
+		System.out.println("\thelp");
+		System.out.println("\t?");
+		System.out.println("\tabout");
+		System.out.println("\tflavor town");
 	}
 	void about()
 	{
@@ -44,5 +53,5 @@ public class commands
 		System.out.print(String.valueOf(chars));
 	}
 	
-	/**CREATE FUSION COMMAND*/ //Fusion command should look like: fusion <FIRST_COMMAND> _/ \_ <SECOND_COMMAND>
+	/**CREATE FUSION COMMAND*/ //Fusion command should look like: fusion <FIRST_COMMAND> _/\_ <SECOND_COMMAND>
 }
