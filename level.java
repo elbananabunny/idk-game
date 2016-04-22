@@ -9,8 +9,7 @@ public class level
 {
 	void beginning()
 	{
-		if (player.getCharacter().equalsIgnoreCase("MajicMan")) //There are different prompts for each character in this case, so if statements are required.
-		{
+		if (player.getCharacter().equalsIgnoreCase("MajicMan")) { //There are different prompts for each character in this case, so if statements are required.
 			uPrompt(); //i'm lazy
 			System.out.println("You, " + player.getCharacter() + ", are living with your grandma, but hear a thud,");
 			System.out.println("You are suspicious and go check it out, but you sexy girlfriend,");
@@ -21,9 +20,7 @@ public class level
 			printTab("2. Stay at your grandma's");
 			jttn(2); //i'm lazy
 			lPrompt(); //i'm lazy
-		}
-		else
-		{
+		} else {
 			uPrompt();
 			System.out.println("You, " + player.getCharacter() + ", an independant woman,");
 			System.out.println("are living with your grandma, but hear a thud.");
@@ -40,8 +37,7 @@ public class level
 
 	void adventure()
 	{
-		if (player.getCharacter().equalsIgnoreCase("Toaster"))
-		{
+		if (player.getCharacter().equalsIgnoreCase("Toaster")) {
 			uPrompt();
 			System.out.println("You leave your Grandmah's house in search for your butifull door knob");
 			System.out.println("girlfirend. As you walk you see a small hole, about the size of a");
@@ -51,9 +47,7 @@ public class level
 			printTab("2. Go down toaster hole");
 			jttn(2);
 			lPrompt();
-		}
-		else
-		{
+		} else {
 			uPrompt();
 			System.out.println("You leave your Grandmah's house in search for your butifull door knob");
 			System.out.println("girlfirend. As you walk you see a small hole, about the size of a toaster.");
@@ -104,18 +98,16 @@ public class level
 	void jttn(int x) //j(ust) t(ype) t(he) n(umber). Arg is the ammount of choices the user has.
 	{
 		System.out.print("Just type the number ");
-		if (x > 1)
-		{
+		if (x > 1) {
 			System.out.print("(");
-			for (int i = 1; i <= x; ++i) //loop that will print (<NUMBER> or <NUMBER>) until there is one number left.
-			{
+			for (int i = 1; i <= x; ++i) { //loop that will print (<NUMBER> or <NUMBER>) until there is one number left.
 				if (i < x)
 					System.out.printf("%d or ", i);
 				else if (i == x)
 					System.out.printf("%d in this case).\n", i);
 			}
-		}
-		else
+		} else {
 			System.out.println("(1 or 1 in this case)."); //this is on intentional
+		}
 	}
 }

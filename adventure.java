@@ -24,12 +24,10 @@ public class adventure
 				level.beginning();
 			else if (beginning.equalsIgnoreCase("1")) //1 is the correct path.
 				goOnAdventure(); //Brings you to another method. This will be the process for every adventure method.
-			else if (beginning.equalsIgnoreCase("2")) //Wrong answer, taunts the player then prompts them to either leave or stay.
-			{
+			else if (beginning.equalsIgnoreCase("2")) { //Wrong answer, taunts the player then prompts them to either leave or stay.
 				death(beginningSuicide, "You idiot, you didn't even try to save her."); //death takes the suicide string (again, must be empty, NOT void).
 			}
-			else if (beginning.equalsIgnoreCase("fusion cls _/\\_ flavor town") || beginning.equalsIgnoreCase("fusion clear _/\\_ flavor town") || beginning.equalsIgnoreCase("fusion window washer! _/\\_ flavor town"))
-			{
+			else if (beginning.equalsIgnoreCase("fusion cls _/\\_ flavor town") || beginning.equalsIgnoreCase("fusion clear _/\\_ flavor town") || beginning.equalsIgnoreCase("fusion window washer! _/\\_ flavor town")) {
 				command.clear();
 				level.beginning();
 			}
@@ -51,8 +49,7 @@ public class adventure
 			goOnAdventure = userPrompt();
 			if (goOnAdventure.equalsIgnoreCase("flavor town"))
 				level.adventure();
-			else if (goOnAdventure.equalsIgnoreCase("fusion cls _/\\_ flavor town") || goOnAdventure.equalsIgnoreCase("fusion clear _/\\_ flavor town") || goOnAdventure.equalsIgnoreCase("fusion window washer! _/\\_ flavor town"))
-			{
+			else if (goOnAdventure.equalsIgnoreCase("fusion cls _/\\_ flavor town") || goOnAdventure.equalsIgnoreCase("fusion clear _/\\_ flavor town") || goOnAdventure.equalsIgnoreCase("fusion window washer! _/\\_ flavor town")) {
 				command.clear();
 				level.adventure();
 			}
@@ -70,6 +67,7 @@ public class adventure
 	void goToTree() /**DO THIS WHEN DONE WITH goOnAdventure*/
 	{
 		commands command = new commands();
+		seduce seduce = new seduce();
 		level level = new level();
 		level.goToTree();
 		String goToTree = "", goToTreeSuicide = "";
@@ -78,8 +76,7 @@ public class adventure
 			goToTree = userPrompt();
 			if (goToTree.equalsIgnoreCase("flavor town"))
 				level.gardener();
-			else if (goToTree.equalsIgnoreCase("fusion cls _/\\_ flavor town") || goToTree.equalsIgnoreCase("fusion clear _/\\_ flavor town") || goToTree.equalsIgnoreCase("fusion window washer! _/\\_ flavor town"))
-			{
+			else if (goToTree.equalsIgnoreCase("fusion cls _/\\_ flavor town") || goToTree.equalsIgnoreCase("fusion clear _/\\_ flavor town") || goToTree.equalsIgnoreCase("fusion window washer! _/\\_ flavor town")) {
 				command.clear();
 				level.goToTree();
 			}
@@ -88,7 +85,7 @@ public class adventure
 			else if (goToTree.equalsIgnoreCase("1") && player.getCharacter().equalsIgnoreCase("MajicMan"))
 				level.gardener(); /**Create a gardener level. This should direct to the gardener method in this class that is soon to be created. THIS IS TEMPORARY*/
 			else if (goToTree.equalsIgnoreCase("2"))
-				System.out.println("This is awqward, you can't seduce yet. Try something else? idk.");
+				seduce.seduceTree();
 			else
 				baseCommands(goToTree, goToTreeSuicide);
 			if (this.quit == true)
@@ -126,17 +123,13 @@ public class adventure
 			command.clear();
 		else if (playerCommand.equalsIgnoreCase("suicide")) //Kills player (I wouldn't blame him tbh).
 			death(playerSuicide, "Realizing that you left the master key to any door under the doormat, you go to\nyour bathroom to drop a hairdryer into the bath tub because you are too dumb\nfor planet Earth.");
-		else if (playerCommand.equalsIgnoreCase("fusion cls _/\\_ help") || playerCommand.equalsIgnoreCase("fusion cls _/\\_ ?") || playerCommand.equalsIgnoreCase("fusion clear _/\\_ help") || playerCommand.equalsIgnoreCase("fusion clear _/\\_ ?") || playerCommand.equalsIgnoreCase("fusion window washer! _/\\_ help") || playerCommand.equalsIgnoreCase("fusion window washer! _/\\_ ?"))
-		{
+		else if (playerCommand.equalsIgnoreCase("fusion cls _/\\_ help") || playerCommand.equalsIgnoreCase("fusion cls _/\\_ ?") || playerCommand.equalsIgnoreCase("fusion clear _/\\_ help") || playerCommand.equalsIgnoreCase("fusion clear _/\\_ ?") || playerCommand.equalsIgnoreCase("fusion window washer! _/\\_ help") || playerCommand.equalsIgnoreCase("fusion window washer! _/\\_ ?")) {
 			command.clear();
 			command.help();
-		}
-		else if (playerCommand.equalsIgnoreCase("fusion cls _/\\_ about") || playerCommand.equalsIgnoreCase("fusion clear _/\\_ about") || playerCommand.equalsIgnoreCase("fusion window washer! _/\\_ about"))
-		{
+		} else if (playerCommand.equalsIgnoreCase("fusion cls _/\\_ about") || playerCommand.equalsIgnoreCase("fusion clear _/\\_ about") || playerCommand.equalsIgnoreCase("fusion window washer! _/\\_ about")) {
 			command.clear();
 			command.about();
-		}
-		else //If the command is not found, print this and restart the loop.
+		} else //If the command is not found, print this and restart the loop.
 			System.out.println("You idiot, that isn't a command. Hitmen are headed your way, idiot.");
 	}
 	
