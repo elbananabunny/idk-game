@@ -5,6 +5,146 @@
  * If you are looking for the main, check idk.java
  */
  
+ /**
+ //Template for future seduction games
+		//Question 1
+		System.out.println("");
+		printTab("a. ", true);
+		printTab("b. ", true);
+		printTab("c. ", true);
+		printTab("d. ", true);
+		prompt();
+		answer('a');
+		
+		//Question 2
+		System.out.println("");
+		printTab("a. ", true);
+		printTab("b. ", true);
+		printTab("c. ", true);
+		printTab("d. ", true);
+		prompt();
+		answer('c');
+		
+		//Question 3
+		System.out.println("");
+		printTab("a. ", true);
+		printTab("b. ", true);
+		printTab("c. ", true);
+		printTab("d. ", true);
+		prompt();
+		answer('a');
+		
+		//Question 4
+		System.out.println("");
+		printTab("a. ", true);
+		printTab("b. ", true);
+		printTab("c. ", true);
+		printTab("d. ", true);
+		prompt();
+		answer('d');
+		
+		//Question 5
+		System.out.println("");
+		printTab("a. ", true);
+		printTab("b. ", true);
+		printTab("c. ", true);
+		printTab("d. ", true);
+		prompt();
+		answer('d');
+		
+		//Question 6
+		System.out.println("");
+		printTab("a. ", true);
+		printTab("b. ", true);
+		printTab("c. ", true);
+		printTab("d. ", true);
+		prompt();
+		answer('b');
+		
+		//Question 7
+		System.out.println("");
+		printTab("a. ", true);
+		printTab("b. ", true);
+		printTab("c. ", true);
+		printTab("d. ", true);
+		prompt();
+		answer('c');
+		
+		//Question 8
+		System.out.println("");
+		printTab("a. ", true);
+		printTab("b. ", true);
+		printTab("c. ", true);
+		printTab("d. ", true);
+		prompt();
+		answer('d');
+		
+		//Question 9
+		System.out.println("");
+		printTab("a. ", true);
+		printTab("b. ", true);
+		printTab("c. ", true);
+		printTab("d. ", true);
+		prompt();
+		answer('d');
+		
+		//Question 10
+		System.out.println("");
+		printTab("a. ", true);
+		printTab("b. ", true);
+		printTab("c. ", true);
+		printTab("d. ", true);
+		prompt();
+		answer('c');
+		
+		//Question 11
+		System.out.println("");
+		printTab("a. ", true);
+		printTab("b. ", true);
+		printTab("c. ", true);
+		printTab("d. ", true);
+		prompt();
+		answer('b');
+		
+		//Question 12
+		System.out.println("");
+		printTab("a. ", true);
+		printTab("b. ", true);
+		printTab("c. ", true);
+		printTab("d. ", true);
+		prompt();
+		answer('d');
+		
+		//Question 13
+		System.out.println("");
+		printTab("a. ", true);
+		printTab("b. ", true);
+		printTab("c. ", true);
+		printTab("d. ", true);
+		prompt();
+		answer('c');
+		
+		//Question 14
+		System.out.println("");
+		printTab("a. ", true);
+		printTab("b. ", true);
+		printTab("c. ", true);
+		printTab("d. ", true);
+		prompt();
+		answer('b');
+		
+		//Question 15
+		System.out.println("");
+		printTab("a. ", true);
+		printTab("b. ", true);
+		printTab("c. ", true);
+		printTab("d. ", true);
+		prompt();
+		answer('b');
+		
+		System.out.println("You got " + this.points + " points. If you would ask me, that's pretty crappy.");
+ */
+ 
  import java.util.Scanner;
 
 public class seduce
@@ -311,9 +451,9 @@ public class seduce
 		System.out.println("If a rubber band weighs 40 milligrams, how many of them will weigh one");
 		System.out.println("kilogram?");
 		printTab("a. 800", true);
-		printTab("b. -20,000,000");
-		printTab("c. 10,000,000");
-		printTab("d. -25,000"); //correct answer
+		printTab("b. -20,000,000", true);
+		printTab("c. 10,000,000", true);
+		printTab("d. -25,000", true); //correct answer
 		prompt();
 		answer('d');
 		
@@ -326,6 +466,164 @@ public class seduce
 		printTab("d. PP", true);
 		prompt();
 		answer('c');
+		
+		System.out.println("You got " + this.points + " points. If you would ask me, that's pretty crappy.");
+	}
+	
+	void seduceGardener()
+	{
+		//Question 1
+		System.out.println("In the final of 1992, the first McDonald's restaurant in Africa opened in an");
+		System.out.println("exotic city bordering the Atlantic Ocean - the largest city in its country.");
+		System.out.println("What city was it?");
+		printTab("a. Casablanca", true); //correct answer
+		printTab("b. Weast Niger", true);
+		printTab("c. AustinisaPoopyHead", true);
+		printTab("d. Lagos", true);
+		prompt();
+		answer('a');
+		
+		//Question 2
+		System.out.println("Seawater contains about what percent salt?");
+		printTab("a. 38%", true);
+		printTab("b. 87%", true);
+		printTab("c. 4%", true); //correct answer
+		printTab("d. -72%", true);
+		prompt();
+		answer('c');
+		
+		//Question 3
+		System.out.println("With an estimated fortune at over $1 billion, she's one of the richest women in");
+		System.out.println("Britain, and in 2006 was the second-richest female entertainer in the world.");
+		System.out.println("Who is this?");
+		printTab("a. J. K. Rowling", true); //correct answer
+		printTab("b. Erin Hunter", true);
+		printTab("c. Emma Watson", true);
+		printTab("d. Emily Blunt", true);
+		prompt();
+		answer('a');
+		
+		//Question 4
+		System.out.println("Patty Hearst was kidnapped on February 4, in what year?");
+		printTab("a. 1973", true);
+		printTab("b. 1982", true);
+		printTab("c. 2014", true);
+		printTab("d. 1974", true); //correct answer
+		prompt();
+		answer('d');
+		
+		//Question 5
+		System.out.println("What do these well known people have in common? Dan Aykrod, Neil Young, Michael");
+		System.out.println("J. Fox, and Peter Jennings?");
+		printTab("a. Make Movies", true);
+		printTab("b. Somewhat weird names", true);
+		printTab("c. Humans", true);
+		printTab("d. Born in Canada", true); //correct answer
+		prompt();
+		answer('d');
+		
+		//Question 6
+		System.out.println("If there are 16 telephone poles in a straight line, each pole 80 meters apart,");
+		System.out.println("how far is it from the first pole to the last?");
+		printTab("a. Do you have math? I HATE math!", true);
+		printTab("b. 1200 Meters", true); //correct answer
+		printTab("c. 300 Meters", true);
+		printTab("d. 4 Days", true);
+		prompt();
+		answer('b');
+		
+		//Question 7
+		System.out.println("What is the name of the delightful 1980 South African film about an African");
+		System.out.println("bushman sent by his tribe to get rid of the evil thing that droped out of the");
+		System.out.println("sky: a Coke bottle");
+		printTab("a. Africa be Cray-Cray", true);
+		printTab("b. The Gods Must be Cray-Cray", true);
+		printTab("c. The Gods Must be Crazy", true); //correct answer
+		printTab("d. WOW", true);
+		prompt();
+		answer('c');
+		
+		//Question 8
+		System.out.println("This word refers to a type of sofa, a type of overcoat, a brand of cigarettes,");
+		System.out.println("and a city in England. What is it?");
+		printTab("a. Thatington", true);
+		printTab("b. Thatch", true);
+		printTab("c. Hooch", true);
+		printTab("d. Chesterfield", true); //correct answer
+		prompt();
+		answer('d');
+		
+		//Question 9
+		System.out.println("Which television personality, who retired in May, 1992, announced in a");
+		System.out.println("television interview that he was comfortable in front of an audience but");
+		System.out.println("awkward with people off camera?");
+		printTab("a. May Haruka", true);
+		printTab("b. Johnny Cash", true);
+		printTab("c. A-Ha", true);
+		printTab("d. Johnny Carson", true); //correct answer
+		prompt();
+		answer('d');
+		
+		//Question 10
+		System.out.println("What is Desi Arnaz's catchphrase?");
+		printTab("a. Hey", true);
+		printTab("b. Babaloo", true);
+		printTab("c. LUCY I'M HOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOME", true); //correct answer
+		printTab("d. Thank You So Much", true);
+		prompt();
+		answer('c');
+		
+		//Question 11
+		System.out.println("Which range of hills runs in a north-south direction through the central part");
+		System.out.println("of England?");
+		printTab("a. Killaway", true);
+		printTab("b. Pennies", true); //correct answer
+		printTab("c. Karl", true);
+		printTab("d. Martisx", true);
+		prompt();
+		answer('b');
+		
+		//Question 12
+		System.out.println("What is the product name of the Skull Shaver Electric Razor");
+		printTab("a. Harkian", true);
+		printTab("b. J-Marks", true);
+		printTab("c. Danger-J", true);
+		printTab("d. Bald Eagle", true); //correct answer
+		prompt();
+		answer('d');
+		
+		//Question 13
+		System.out.println("What professional boxer retired from the sport in 1976, later un-retired, and");
+		System.out.println("in 1994 became the oldest fighter to ever win a major heavyweight title?");
+		printTab("a. Mike Tyson", true);
+		printTab("b. 'Little Mac'", true);
+		printTab("c. George Foreman", true); //correct answer
+		printTab("d. Kevin James", true);
+		prompt();
+		answer('c');
+		
+		//Question 14
+		System.out.println("By what name do we identify those certain kinds of weasels whose coats change");
+		System.out.println("color in the winter?");
+		printTab("a. Winter Weasels", true);
+		printTab("b. Ermine", true); //correct answer
+		printTab("c. Weir", true);
+		printTab("d. Drupe", true);
+		prompt();
+		answer('b');
+		
+		//Question 15
+		System.out.println("A city is in the shape of a rectangle, three times as long as it is wide. If a");
+		System.out.println("diagonal distance through the city is one kilometer, what's the area of this");
+		System.out.println("city, to the nearest square meter?");
+		printTab("a. Do you have math? I HATE math", true);
+		printTab("b. 333,333 Square Meters", true); //correct answer
+		printTab("c. 333,323 Square Meters", true);
+		printTab("d. 400 Square Meters", true);
+		prompt();
+		answer('b');
+		
+		System.out.println("You got " + this.points + " points. If you would ask me, that's pretty crappy.");
 	}
 	
 	void printTab(String s, boolean newline)
