@@ -7,13 +7,13 @@
  
  import java.util.Scanner;
 
-public class seduce //I'm starting to think this game is getting pretty dumb.
+public class seduce
 {
 	char input; //Atribute to store user input.
 	int points = 0; //The more points, the more chance that the seduction will work.
 	public seduce() //Prompt for the game, too lazy to write it every time, not lazy enough to write this comment.
 	{
-		System.out.println("We were nice enough to play the game, you didn't have to go as far as to do\nTHIS.");
+		System.out.println("You were nice enough to play the game, you didn't have to go as far as to do\nTHIS.");
 	}
 	
 	void seduceTree() //Method used when you decide to seduce the tree.
@@ -168,12 +168,164 @@ public class seduce //I'm starting to think this game is getting pretty dumb.
 		printTab("a. Same way as anything, genitalia", true);
 		printTab("b. Seriously, just the genitals", true);
 		printTab("c. The genitals", true);
-		printTab("d. Color of the cere", true);
+		printTab("d. Color of the cere", true); //correct answer
 		prompt();
 		answer('d');
 		
 		//Taunt
 		System.out.println("You got " + this.points + " points. If you would ask me, that's pretty crappy.");
+	}
+	
+	void seduceDuck()
+	{
+		//Question 1
+		System.out.println("Which Frenchman designed the skeleton of the Statue of Liberty");
+		printTab("a. Kestrel Fri", true);
+		printTab("b. Kevin Swampe", true);
+		printTab("c. Mariah Mann", true);
+		printTab("d. Gustave Eiffel", true); //correct answer
+		prompt();
+		answer('d');
+		
+		//Question 2
+		System.out.println("After Los Angeles, what is the most populated California city whose name does");
+		System.out.println("not begin with the letter \"S\"?");
+		printTab("a. Albania", true);
+		printTab("b. Bee City", true);
+		printTab("c. Hollywood", true);
+		printTab("d. Long Beach", true); //correct answer
+		prompt();
+		answer('d');
+		
+		//Question 3
+		System.out.println("Which letter begins more words in the English language than any other letter?");
+		printTab("a. S", true); //correct answer
+		printTab("b. L", true);
+		printTab("c. E", true);
+		printTab("d. M", true);
+		prompt();
+		answer('a');
+		
+		//Question 4
+		System.out.println("If you draw one card from a normal deck of cards, what is the mathematical");
+		System.out.println("probability of drawing a jack, queen, king, or diamond");
+		printTab("a. 12%", true);
+		printTab("b. 43%", true);
+		printTab("c. 15%", true);
+		printTab("d. 42%", true); //correct answer
+		prompt();
+		answer('d');
+		
+		//Question 5
+		System.out.println("His radio show is one of the most popular in America, his book was number 1 on");
+		System.out.println("the New York Times best-seller list for 10 weeks, and some of his supporters");
+		System.out.println("have stated that he should ren for President in 1996 on the Republican ticket.");
+		System.out.println("Who is he?");
+		printTab("a. Tom Cruise", true);
+		printTab("b. Kevin Kevinson", true);
+		printTab("c. Jordan Daniel", true);
+		printTab("d. Rush Limbaugh", true); //correct answer
+		prompt();
+		answer('d');
+		
+		//Question 6
+		System.out.println("What 10th century Catholic saint is know as the patron saint of skiing,");
+		System.out.println("snowboarding, hiking and mountaineering?");
+		printTab("a. St. Bernard", true); //correct answer
+		printTab("b. St. Levian", true);
+		printTab("c. St. Deonta", true);
+		printTab("d. St. Blacke", true);
+		prompt();
+		answer('a');
+		
+		//Question 7
+		System.out.println("Can you identify two California mountains with six-letter names?");
+		printTab("a. Pazazz / Zizzle", true);
+		printTab("b. Quartz / Izzard", true);
+		printTab("c. Quippy / Jockey", true);
+		printTab("d. Shasta / Diablo", true); //correct answer
+		prompt();
+		answer('d');
+		
+		//Question 8
+		System.out.println("In China these noodle-dough dumplings are filled with meat and boiled in soup,");
+		System.our.println("and are called what?");
+		printTab("a. Won Ton", true); //correct answer
+		printTab("b. Hello stupid", true);
+		printTab("c. Eat your hat", true);
+		printTab("d. Noodle dough dumplings filled with meat and cook soup", true);
+		prompt();
+		answer('a');
+		
+		//Question 9
+		System.out.println("The Inuit Indian tribe can be found in Canada, Greenland, and Siberia, but are");
+		System.out.println("known to us by a more common name. What is it?");
+		printTab("a. AI Tribe", true);
+		printTab("b. The hairs of Kevin James chest", true);
+		printTab("c. Eskimo", true); //correct answer
+		printTab("d. Haida", true);
+		prompt();
+		answer('c');
+		
+		//Question 10
+		System.out.println("If you looked at a clock in the mirror and the time on the clock face appeared");
+		System.out.println("to read 8:20, what time would it be in reality?");
+		printTab("a. 8:20", true);
+		printTab("b. 3:40", true); //correct answer
+		printTab("c. 12:49", true);
+		printTab("d. 2:14", true);
+		prompt();
+		answer('b');
+		
+		//Question 11
+		System.out.println("If you flip a coin three times, what's the probability of getting at least one");
+		System.out.println("\"tail\"?");
+		printTab("a. 1/2", true);
+		printTab("b. 9/12", true);
+		printTab("c. 3/8", true);
+		printTab("d. 7/8", true); //correct answer
+		prompt();
+		answer('d');
+		
+		//Question 12
+		System.out.println("Can you name the person whose face appeared on the cover of Time Magazine more");
+		System.out.println("than any other person, about 64 times, during his lifetime?");
+		printTab("a. Johnny Depp", true);
+		printTab("b. Bill Nye", true);
+		printTab("c. Richard Nixon", true); //correct answer
+		printTab("d. Deep Roy", true);
+		prompt();
+		answer('c');
+		
+		//Question 13
+		System.out.println("According to 1991 population estimates, which city of the word has the largest");
+		System.out.println("population, 27 million in its metro area?");
+		printTab("a. Los Angeles", true);
+		printTab("b. New York", true);
+		printTab("c. Tokyo", true); //correct answer
+		printTab("d. Buford", true);
+		prompt();
+		answer('c');
+		
+		//Question 14
+		System.out.println("If a rubber band weighs 40 milligrams, how many of them will weigh one");
+		System.out.println("kilogram?");
+		printTab("a. 800", true);
+		printTab("b. -20,000,000");
+		printTab("c. 10,000,000");
+		printTab("d. -25,000"); //correct answer
+		prompt();
+		answer('d');
+		
+		//Question 15
+		System.out.println("The breed of horse that excels at sprinting short distances, in races of a");
+		System.out.println("quarter mile or less, are aptly called what?");
+		printTab("a. Shetland", true);
+		printTab("b. Austin's", true);
+		printTab("c. Quarter", true); //correct answer
+		printTab("d. PP", true);
+		prompt();
+		answer('c');
 	}
 	
 	void printTab(String s, boolean newline)
