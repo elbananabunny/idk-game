@@ -259,7 +259,7 @@ public class seduce
 		printTab("a. Kerry Strug", true); //Correct answer
 		printTab("b. Maria Sharapova", true);
 		printTab("c. Amelia Earhart", true);
-		printTab("d. Quenn Elizabeth");
+		printTab("d. Quenn Elizabeth", true);
 		prompt();
 		answer('a');
 		
@@ -389,7 +389,7 @@ public class seduce
 		
 		//Question 8
 		System.out.println("In China these noodle-dough dumplings are filled with meat and boiled in soup,");
-		System.our.println("and are called what?");
+		System.out.println("and are called what?");
 		printTab("a. Won Ton", true); //correct answer
 		printTab("b. Hello stupid", true);
 		printTab("c. Eat your hat", true);
