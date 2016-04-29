@@ -11,7 +11,7 @@ public class commands
 	void help()
 	{
 		System.out.println("\nThis is the help command. We don't want to help you,");
-        System.out.println("but I guess we have to :C\n");
+        	System.out.println("but I guess we have to :C\n");
 		System.out.println("\nAll commands are case insensitive.\n");
 		System.out.println("help\t\t\tPrints this help message");
 		System.out.println("?\t\t\tPrints this help message");
@@ -41,7 +41,7 @@ public class commands
 		System.out.println("Story: Joshua Green (goes by \"elbananabunny\")");
 		System.out.println("Music: Cody Wesner (goes by \"WEESBAW\")");
 		System.out.println("\nThis started out as a project for me to practice");
-        System.out.println("Java (the language this is in), but two other people");
+        	System.out.println("Java (the language this is in), but two other people");
 		System.out.println("got involved, and it turned into this. Thank us later.");
 	}
 	void clear() //This method just prints a bunch of newlines. Not that complicated, yet very effective.
