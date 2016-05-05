@@ -17,7 +17,7 @@ class idk
     {
         Clip clip = null; //Clip object to be used in the try/catch for music.
         try { //Play music.
-            clip = AudioSystem.getClip();
+            clip = AudioSystem.getClip(null);
             clip.open(AudioSystem.getAudioInputStream(new File("music/main_menu.wav")));
             clip.start();
             clip.loop(Clip.LOOP_CONTINUOUSLY);

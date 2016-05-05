@@ -70,7 +70,7 @@ public class adventure
             else if (strChoice(goOnAdventure, 1))
                 goToTree();
             else if (player.getCharacter().equalsIgnoreCase("Toaster") && strChoice(goOnAdventure, 2))
-                level.gardener(); /**Create a gardener level. This should direct to the gardener method in this class that is soon to be created. THIS IS TEMPORARY*/
+                level.goToGardener(); /**Create a gardener level. This should direct to the gardener method in this class that is soon to be created. THIS IS TEMPORARY*/
             else
                 baseCommands(goOnAdventure, goOnAdventureSuicide); //Again, baseCommands takes two arguments, the regular input and the suicide input.
             if (this.quit == true)
@@ -96,7 +96,7 @@ public class adventure
             else if (strChoice(goToTree, 1) && player.getCharacter().equalsIgnoreCase("Toaster"))
                 death(goToTreeSuicide, "You try to burn the Tree with your toaster heat, but you are not plugged in,\nyou die of stupidness.");
             else if (strChoice(goToTree, 1) && player.getCharacter().equalsIgnoreCase("MajicMan"))
-                level.gardener(); /**Create a gardener level. This should direct to the gardener method in this class that is soon to be created. THIS IS TEMPORARY*/
+                level.goToGardener(); /**Create a gardener level. This should direct to the gardener method in this class that is soon to be created. THIS IS TEMPORARY*/
             else if (strChoice(goToTree, 2)) {
                 seduce seduce = new seduce();
                 seduce.seduceTree();
