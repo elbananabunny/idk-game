@@ -5,16 +5,19 @@
  
 public class player
 {
-    public static String character;
-    public static void setCharacter(String playersCharacter) //sets the character atribute to whatever the arguments are.
+    private static String character;
+    //sets the character atribute to whatever the arguments are.
+    public static void setCharacter(String playersCharacter)
     {
         character = playersCharacter;
     }
-    public static String getCharacter() //returns a string that either is valued at "MajicMan" the "Toaster"
+    //returns a string that either is valued at "MajicMan" the "Toaster"
+    public static String getCharacter()
     {
         return character;
     }
-    public static void die() //prints out the prompt after a death or suicide
+    //prints out the prompt after a death or suicide
+    public static void die()
     {
         System.out.println("Good job idiot, you died yourself.");
         System.out.println("I already told you there are no saves,");
