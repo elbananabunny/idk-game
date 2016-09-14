@@ -404,11 +404,11 @@ public class adventure
                 for (int i = 0; i < 60; i++) {
                     try {
                         Thread.sleep(250);
-                        System.out.println("         Programmer: Austin Hawkins (Kill Man)");
+                        System.out.println("       Programmer:        Kill Man");
                         Thread.sleep(250);
-                        System.out.println("       Story writer: Joshua Green (elbananabunny)");
+                        System.out.println("       Story writer: elbananabunny");
                         Thread.sleep(250);
-                        System.out.println("               Music: Cody Wesner (WEESBAW)");
+                        System.out.println("       Music:              WEESBAW");
                         Thread.sleep(250);
                         System.out.print("\n");
                     } catch (InterruptedException e) {
